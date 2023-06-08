@@ -1,9 +1,13 @@
-import Image from "next/image";
 
-export default function Home() {
+import { categories } from "../constants";
+import fetchNews from '../lib/fetchNews'
+import NewsList from "./components/NewsList";
+
+export default async function Home() {
+  const news = await fetchNews(categories.join(","));
   return (
-    <div >
-      
+    <div>
+      <NewsList news={news} />
     </div>
   );
 }

@@ -1,7 +1,5 @@
 "use client"
 
-import { useState } from "react";
-import { useAuth } from "@/hooks/auth";
 import Link from "next/link";
 
 function UserCard() {
@@ -19,7 +17,7 @@ function UserCard() {
              lg:px-8 py-2 lg:py-4 rounded-full dark:bg-slate-800"
         >
             <Link
-                href="/login">
+                href="/">
                 Login
             </Link>
 
