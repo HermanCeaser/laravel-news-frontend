@@ -2,6 +2,7 @@ import "./globals.css";
 import { playfair, roboto } from "./fonts";
 import Providers from "./Providers";
 import Header from "./components/Header";
+import { LayoutProvider } from "./LayoutProvider";
 
 export const metadata = {
   title: "React News App",
@@ -13,9 +14,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Providers>
         <body className={`${playfair.variable} ${roboto.variable}`}>
-          <Header />
-          <div className="max-w-6xl mx-auto">{children}</div>
-        
+          {/* If Route is /login, remove header */}
+          <LayoutProvider>
+            <div className="max-w-6xl mx-auto">{children}</div>
+          </LayoutProvider>
         </body>
       </Providers>
     </html>
