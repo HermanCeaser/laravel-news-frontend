@@ -4,24 +4,27 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgba: 253, 253, 253, 0.35;
+  --background-end-rgba: 253, 253, 253, 0.1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ background: linear-gradrient(139.57deg, var(--background-start-rgba), -0.3%, var(--background-end-rgba), 99.01%);
+ backdrop-filter: blur(12.5px);
+}
+
+h1, h2 {
+  font-family: var(--font-roboto);
+  font-weight: 700;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3, h4 {
+  font-size: 16px;
 }
