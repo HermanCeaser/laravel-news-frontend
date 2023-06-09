@@ -3,6 +3,7 @@ import { playfair, roboto } from "./fonts";
 import Providers from "./Providers";
 import Header from "./components/Header";
 import { LayoutProvider } from "./LayoutProvider";
+import NavLinks from "./components/NavLinks";
 
 export const metadata = {
   title: "React News App",
@@ -14,10 +15,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Providers>
         <body className={`${playfair.variable} ${roboto.variable}`}>
-          {/* If Route is /login, remove header */}
-          <LayoutProvider>
-            <div className="max-w-6xl mx-auto">{children}</div>
-          </LayoutProvider>
+          <div className="main">
+            <div className="gradient"></div>
+          </div>
+          <main className="app">
+            {/* If Route is /login, remove header */}
+            <LayoutProvider>
+              <div className="max-w-6xl mx-auto">{children}</div>
+            </LayoutProvider>
+          </main>
         </body>
       </Providers>
     </html>

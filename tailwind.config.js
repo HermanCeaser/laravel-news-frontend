@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-playfair-display)'],
         mono: ['var(--font-roboto)'],
+        'playfair-display': ['Playfair-display', 'sans'],
+        roboto: ['Roboto', 'mono']
+
       },
     },
   },

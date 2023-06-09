@@ -1,12 +1,12 @@
 "use client";
-import AuthCard from "@/app/components/AuthCard";
-import AuthSessionStatus from "@/app/components/AuthSessionStatus";
-import Button from "@/app/components/Button";
-import InputError from "@/app/components/InputError";
-import Label from "@/app/components/Label";
-import { useAuth } from "@/hooks/auth";
+import AuthCard from "../../components/AuthCard";
+import AuthSessionStatus from "../../components/AuthSessionStatus";
+import Button from "../../components/Button";
+import InputError from "../../components/InputError";
+import Label from "../../components/Label";
+import { useAuth} from '../../../hooks/auth'
 import Link from "next/link";
-import { Input } from "postcss";
+import Input from "../../components/Input";
 import { useState } from "react";
 
 function Login() {

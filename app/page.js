@@ -1,13 +1,13 @@
 
-import { categories } from "../constants";
-import fetchNews from '../lib/fetchNews'
-import NewsList from "./components/NewsList";
+// import { categories } from "../constants";
+// import fetchNews from '../lib/fetchNews'
+// import NewsList from "./components/NewsList";
 
 export default async function Home() {
-  const news = await fetchNews(categories.join(","));
+  // const news = await fetchNews(categories.join(","));
   return (
-    <div>
-      <NewsList news={news} />
-    </div>
+    <section className="w-full flex-center flex-col">
+      <h1 className="head_text">Hot Topics</h1>
+    </section>
   );
 }
